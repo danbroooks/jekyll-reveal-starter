@@ -4,12 +4,13 @@
   "description": "Serve Reveal.js presentations via Jekyll",
   "main": "index.html",
   "dependencies": {
+    "concurrently": "^3.4.0",
     "reveal.js": "^3.4.1",
     "webpack": "^2.2.1"
   },
   "devDependencies": {},
   "scripts": {
-    "presentation": "jekyll serve"
+    "presentation": "concurrently 'jekyll serve' 'webpack -w'"
   },
   "repository": {
     "type": "git",
