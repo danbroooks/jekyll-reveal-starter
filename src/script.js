@@ -10,8 +10,8 @@ Reveal.initialize({
   transitionSpeed: 'fast',
 
   dependencies: [
-    { src: require('reveal-plugin-loader!reveal.js/plugin/markdown/marked.js') },
-    { src: require('reveal-plugin-loader!reveal.js/plugin/markdown/markdown.js') },
+    { src: require('reveal-plugin-loader!reveal.js/plugin/markdown/marked.js'), async: true },
+    { src: require('reveal-plugin-loader!reveal.js/plugin/markdown/markdown.js'), async: true },
     { src: require('reveal-plugin-loader!reveal.js/plugin/notes/notes.js'), async: true },
     { src: require('reveal-plugin-loader!reveal.js/plugin/highlight/highlight.js'), async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
   ]
