@@ -1,0 +1,23 @@
+{
+  "name": "jekyll-reveal-starter",
+  "version": "1.0.0",
+  "description": "Serve Reveal.js presentations via Jekyll",
+  "main": "index.html",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "presentation": "jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:danbroooks/jekyll-reveal-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danbroooks/jekyll-reveal-starter/issues"
+  },
+  "homepage": "https://github.com/danbroooks/jekyll-reveal-starter#readme"
+}
