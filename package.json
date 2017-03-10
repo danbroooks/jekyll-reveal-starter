@@ -4,9 +4,9 @@
   "description": "Serve Reveal.js presentations via Jekyll",
   "main": "index.html",
   "dependencies": {
+    "reveal.js": "^3.4.1"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "presentation": "jekyll serve"
   },
