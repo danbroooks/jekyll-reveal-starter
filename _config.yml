@@ -1,3 +1,5 @@
+destination: presentation
+source: src
 exclude:
   - package.json
   - yarn.lock

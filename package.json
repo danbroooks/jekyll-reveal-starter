@@ -4,7 +4,8 @@
   "description": "Serve Reveal.js presentations via Jekyll",
   "main": "index.html",
   "dependencies": {
-    "reveal.js": "^3.4.1"
+    "reveal.js": "^3.4.1",
+    "webpack": "^2.2.1"
   },
   "devDependencies": {},
   "scripts": {
