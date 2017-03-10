@@ -9,6 +9,11 @@ module.exports = {
     path: 'presentation',
     filename: 'script.js'
   },
+  resolveLoader: {
+    alias: {
+      "reveal-plugin-loader": 'file-loader?name=[name].[ext]'
+    }
+  },
   module: {
     rules: [
       {
@@ -44,10 +49,6 @@ module.exports = {
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url-loader?limit=10000&mimetype=image/svg+xml"
-      },
-      {
-        test: /\.html$/,
-        loader: 'html-loader'
       },
       {
         test: /\.jpg$/,

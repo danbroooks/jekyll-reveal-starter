@@ -1,16 +1,18 @@
 
+require('reveal.js/lib/js/head.min.js');
+require('file-loader?name=[name].[ext]!reveal.js/plugin/notes/notes.html')
+
 window.Reveal = require('reveal.js');
 
 Reveal.initialize({
   history: true,
   transition: 'slide',
   transitionSpeed: 'fast',
+
+  dependencies: [
+    { src: require('reveal-plugin-loader!reveal.js/plugin/markdown/marked.js') },
+    { src: require('reveal-plugin-loader!reveal.js/plugin/markdown/markdown.js') },
+    { src: require('reveal-plugin-loader!reveal.js/plugin/notes/notes.js'), async: true },
+    { src: require('reveal-plugin-loader!reveal.js/plugin/highlight/highlight.js'), async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  ]
 });
-
-require('reveal.js/plugin/markdown/marked.js');
-require('reveal.js/plugin/markdown/markdown.js');
-require('reveal.js/plugin/notes/notes.js');
-
-window.hljs = require('highlight.js');
-require('./highlight-reveal.js');
-hljs.initHighlightingOnLoad();
