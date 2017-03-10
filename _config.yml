@@ -1,9 +1,7 @@
 destination: presentation
 source: src
 exclude:
-  - node_modules
-  - package.json
-  - yarn.lock
+  - assets
+  - slides
 keep_files:
-  - script.js
-  - styles.css
+  - assets

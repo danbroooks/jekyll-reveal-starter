@@ -1,6 +1,7 @@
 
 require('reveal.js/lib/js/head.min.js');
-require('file-loader?name=[name].[ext]!reveal.js/plugin/notes/notes.html')
+require('file-loader?name=[name].[ext]!reveal.js/plugin/notes/notes.html');
+require('reveal.js/lib/font/source-sans-pro/source-sans-pro.css');
 
 window.Reveal = require('reveal.js');
 

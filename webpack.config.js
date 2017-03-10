@@ -2,12 +2,13 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: [
-    './src/script.js',
-    './src/styles.scss'
+    './src/assets/script.js',
+    './src/assets/styles.scss'
   ],
   output: {
-    path: 'presentation',
-    filename: 'script.js'
+    path: 'presentation/assets',
+    filename: 'script.js',
+    publicPath: 'assets/',
   },
   resolveLoader: {
     alias: {
@@ -27,6 +28,10 @@ module.exports = {
         }),
       },
       {
+        test: /(\.css$)/,
+        loaders: ['style-loader', 'css-loader']
+      },
+      {
         test: /\.eot(\?\S*)?$/,
         loader: 'url-loader?limit=100000&mimetype=application/vnd.ms-fontobject'
       },
@@ -44,7 +49,7 @@ module.exports = {
       },
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "file-loader"
+        loader: "url-loader"
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,

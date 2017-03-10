@@ -1,5 +1,5 @@
-@import "../node_modules/reveal.js/lib/css/zenburn.css";
-@import "../node_modules/reveal.js/css/reveal.scss";
+@import "../../node_modules/reveal.js/lib/css/zenburn.css";
+@import "../../node_modules/reveal.js/css/reveal.scss";
 
 /**
  * Black theme for reveal.js. This is the opposite of the 'white' theme.
@@ -9,14 +9,9 @@
 
 
 // Default mixins and settings -----------------
-@import "../node_modules/reveal.js/css/theme/template/mixins";
-@import "../node_modules/reveal.js/css/theme/template/settings";
+@import "../../node_modules/reveal.js/css/theme/template/mixins";
+@import "../../node_modules/reveal.js/css/theme/template/settings";
 // ---------------------------------------------
-
-
-// Include theme-specific fonts
-@import url(../node_modules/reveal.js/lib/font/source-sans-pro/source-sans-pro.css);
-
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #222;
@@ -48,5 +43,5 @@ section.has-light-background {
 
 
 // Theme template ------------------------------
-@import "../node_modules/reveal.js/css/theme/template/theme";
+@import "../../node_modules/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
