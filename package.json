@@ -7,10 +7,13 @@
     "concurrently": "^3.4.0",
     "css-loader": "^0.26.4",
     "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
+    "highlight.js": "^9.10.0",
     "node-sass": "^4.5.0",
     "reveal.js": "^3.4.1",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.13.2",
+    "url-loader": "^0.5.8",
     "webpack": "^2.2.1"
   },
   "devDependencies": {},

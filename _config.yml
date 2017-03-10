@@ -4,3 +4,6 @@ exclude:
   - node_modules
   - package.json
   - yarn.lock
+keep_files:
+  - script.js
+  - styles.css
