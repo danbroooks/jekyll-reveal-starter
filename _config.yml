@@ -1,5 +1,6 @@
 destination: presentation
 source: src
 exclude:
+  - node_modules
   - package.json
   - yarn.lock
