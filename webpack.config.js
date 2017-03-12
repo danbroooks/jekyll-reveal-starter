@@ -1,19 +1,14 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: [
-    './src/assets/script.js',
-    './src/assets/styles.scss'
-  ],
+  entry: {
+    'index': './src/assets/script.js'
+  },
   output: {
     path: 'presentation/assets',
-    filename: 'script.js',
+    filename: '[name].js',
     publicPath: 'assets/',
-  },
-  resolveLoader: {
-    alias: {
-      "reveal-plugin-loader": 'file-loader?name=[name].[ext]'
-    }
   },
   module: {
     rules: [
@@ -49,23 +44,24 @@ module.exports = {
       },
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url-loader"
+        loader: 'url-loader'
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url-loader?limit=10000&mimetype=image/svg+xml"
+        loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
       },
       {
         test: /\.jpg$/,
-        loader: "file-loader"
+        loader: 'file-loader'
       },
       {
         test: /\.png$/,
-        loader: "url-loader?mimetype=image/png"
+        loader: 'url-loader?mimetype=image/png'
       },
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('[name].css'),
+    new CopyWebpackPlugin([{ from: './node_modules/reveal.js/plugin', to: 'plugin' }], {})
   ],
 };

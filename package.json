@@ -5,6 +5,7 @@
   "main": "index.html",
   "dependencies": {
     "concurrently": "^3.4.0",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.4",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
